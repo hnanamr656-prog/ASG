@@ -1,170 +1,201 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASG</title>
+<title>ASG App</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body{
   margin:0;
+  background:linear-gradient(135deg,#000,#111);
   font-family: Arial, sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+/* إطار الموبايل */
+.app{
+  width:380px;
+  height:90vh;
   background:#000;
-  color:#fff;
+  border-radius:35px;
+  overflow:hidden;
+  box-shadow:0 0 30px rgba(0,255,204,0.2);
+  border:2px solid rgba(255,255,255,0.1);
+  display:flex;
+  flex-direction:column;
+}
+
+/* الهيدر */
+.header{
+  padding:20px;
   text-align:center;
+  background:#0a0a0a;
+  border-bottom:1px solid #222;
 }
 
+.header h1{
+  margin:0;
+  font-size:22px;
+  color:#fff;
+}
+
+/* المحتوى */
 .container{
-  max-width:420px;
-  margin:auto;
-  padding:30px 20px;
+  padding:15px;
+  overflow-y:auto;
 }
 
+/* اللوجو */
 .logo img{
   width:90px;
   height:90px;
   border-radius:50%;
-  margin:20px auto;
-  box-shadow:0 0 15px rgba(0,255,204,0.3);
+  margin:10px auto;
+  display:block;
 }
 
-/* العنوان */
-h1{font-size:20px;}
-.sub{color:#aaa; font-size:13px; margin-bottom:20px;}
-
 /* أيقونات */
+.icons{
+  text-align:center;
+  margin:10px 0;
+}
 .icons a{
   color:#fff;
   margin:0 10px;
-  font-size:22px;
-  transition:0.3s;
+  font-size:20px;
 }
 .icons a:hover{
   color:#00ffcc;
-  transform:scale(1.2);
 }
 
-/* اللينكات */
+/* زرار */
 .link{
   display:flex;
-  justify-content:center;
+  justify-content:space-between;
   align-items:center;
-  gap:10px;
   background:#111;
-  padding:15px;
+  padding:14px;
   margin:10px 0;
   border-radius:12px;
   text-decoration:none;
   color:#fff;
-  transition:0.25s;
-  border:1px solid rgba(255,255,255,0.05);
+  transition:0.3s;
 }
 
 .link:hover{
   background:#00ffcc;
   color:#000;
-  transform:scale(1.04);
+  transform:scale(1.03);
 }
 
-/* تأثير ضغط */
 .link:active{
-  transform:scale(0.96);
+  transform:scale(0.95);
 }
 
-/* زر التليجرام */
-.toggle{
-  cursor:pointer;
+/* dropdown */
+.dropdown{
+  max-height:0;
+  overflow:hidden;
+  transition:0.5s;
 }
 
-/* السهم */
+.dropdown.open{
+  max-height:700px;
+}
+
+/* سهم */
 .arrow{
   transition:0.3s;
 }
-
 .arrow.rotate{
   transform:rotate(180deg);
 }
 
-/* قائمة التليجرام */
-.telegram-list{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height 0.6s ease;
-}
-
-.telegram-list.open{
-  max-height:700px;
-}
-
-/* أنيميشن */
-.telegram-list a{
-  opacity:0;
-  transform:translateY(-10px);
-  transition:0.4s;
-}
-
-.telegram-list.open a{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* الفوتر */
+/* footer */
 .footer{
-  margin-top:20px;
+  text-align:center;
   font-size:11px;
   color:#666;
+  padding:10px;
 }
 </style>
 </head>
 
 <body>
 
+<div class="app">
+
+<!-- HEADER -->
+<div class="header">
+  <h1>ASG</h1>
+</div>
+
 <div class="container">
 
+<!-- LOGO -->
 <div class="logo">
   <img src="logo.jpeg">
 </div>
 
-<h1>ASG Collection</h1>
-<div class="sub">Best Products • Best Prices</div>
-
+<!-- ICONS -->
 <div class="icons">
-  <a href="https://t.me/+cvQqcfpfEm45ZDRk"><i class="fab fa-telegram"></i></a>
   <a href="https://www.facebook.com/share/18VAmaaw3k/"><i class="fab fa-facebook"></i></a>
   <a href="https://vm.tiktok.com/ZS9LDyxJKUwce-u38nm/"><i class="fab fa-tiktok"></i></a>
+  <a href="https://www.instagram.com/ahmedsalah5_24?igsh=MXF4cG9wbGZlNm5mcA=="><i class="fab fa-instagram"></i></a>
+  <a href="https://t.me/+cvQqcfpfEm45ZDRk"><i class="fab fa-telegram"></i></a>
 </div>
 
-<!-- الأساسي -->
+<!-- LINKS -->
 <a class="link" href="https://www.facebook.com/share/18VAmaaw3k/">
-  <i class="fab fa-facebook"></i> Facebook
+  <span>Facebook</span>
+  <i class="fab fa-facebook"></i>
 </a>
 
 <a class="link" href="https://vm.tiktok.com/ZS9LDyxJKUwce-u38nm/">
-  <i class="fab fa-tiktok"></i> TikTok
+  <span>TikTok</span>
+  <i class="fab fa-tiktok"></i>
 </a>
 
-<a class="link" href="https://wa.me/201507540976">
-  <i class="fab fa-whatsapp"></i> WhatsApp
+<a class="link" href="https://www.instagram.com/ahmedsalah5_24?igsh=MXF4cG9wbGZlNm5mcA==">
+  <span>Instagram</span>
+  <i class="fab fa-instagram"></i>
 </a>
 
-<!-- زر التليجرام -->
+<!-- WhatsApp -->
+<div class="link toggle" onclick="toggleWhats()">
+  <span>WhatsApp</span>
+  <i class="fab fa-whatsapp"></i>
+</div>
+
+<div class="dropdown" id="wa">
+  <a class="link" href="https://wa.me/201055351759"><span>01055351759</span></a>
+  <a class="link" href="https://wa.me/201507540976"><span>01507540976</span></a>
+</div>
+
+<!-- Telegram -->
 <div class="link toggle" onclick="toggleTelegram()">
-  <i class="fab fa-telegram"></i> Telegram Channels
+  <span>Telegram Channels</span>
   <i class="fas fa-chevron-down arrow" id="arrow"></i>
 </div>
 
-<!-- القنوات -->
-<div class="telegram-list" id="tg">
+<div class="dropdown" id="tg">
 
-  <a class="link" href="https://t.me/+cvQqcfpfEm45ZDRk">Telegram</a>
-  <a class="link" href="https://t.me/+S8jlor76U8JhMGU0">Telegram</a>
-  <a class="link" href="https://t.me/+WJX-vfT_n2thYmVk">Telegram</a>
-  <a class="link" href="https://t.me/+aStkOZ1UQu02MWE8">Telegram</a>
-  <a class="link" href="https://t.me/+NpUVbIkrMW5hMTJk">Telegram</a>
-  <a class="link" href="https://t.me/+EiFjyY61P9w2YzA0">Telegram</a>
-  <a class="link" href="https://t.me/+VyjgwabrB9JmMmJk">Telegram</a>
+  <a class="link" href="https://t.me/+cvQqcfpfEm45ZDRk"><span>كاجوال حريمي</span></a>
+  <a class="link" href="https://t.me/+EiFjyY61P9w2YzA0"><span>لانجيري و الهوم وير</span></a>
+  <a class="link" href="https://t.me/+aStkOZ1UQu02MWE8"><span>العبايات</span></a>
+  <a class="link" href="https://t.me/+WJX-vfT_n2thYmVk"><span>الزي الشرعي</span></a>
+  <a class="link" href="https://t.me/+VyjgwabrB9JmMmJk"><span>الاطفال</span></a>
+  <a class="link" href="https://t.me/+NpUVbIkrMW5hMTJk"><span>الرجال</span></a>
+  <a class="link" href="https://t.me/+S8jlor76U8JhMGU0"><span>الاحذيه</span></a>
+  <a class="link" href="https://t.me/+ZXABIjMhp-VhZGI8"><span>الشنط</span></a>
+
+</div>
 
 </div>
 
@@ -173,6 +204,10 @@ h1{font-size:20px;}
 </div>
 
 <script>
+function toggleWhats(){
+  document.getElementById("wa").classList.toggle("open");
+}
+
 function toggleTelegram(){
   document.getElementById("tg").classList.toggle("open");
   document.getElementById("arrow").classList.toggle("rotate");
