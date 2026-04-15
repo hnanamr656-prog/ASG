@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASG</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#000;
+  color:#fff;
+  text-align:center;
+}
+
+.container{
+  max-width:420px;
+  margin:auto;
+  padding:30px 20px;
+}
+
+.logo img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  margin:20px auto;
+}
+
+/* عنوان */
+h1{font-size:20px;}
+.sub{color:#aaa; font-size:13px; margin-bottom:20px;}
+
+/* أيقونات */
+.icons a{
+  color:#fff;
+  margin:0 10px;
+  font-size:22px;
+}
+
+/* اللينكات */
+.link{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  background:#111;
+  padding:15px;
+  margin:10px 0;
+  border-radius:12px;
+  text-decoration:none;
+  color:#fff;
+  transition:0.3s;
+}
+
+.link:hover{
+  background:#00ffcc;
+  color:#000;
+  transform:scale(1.03);
+}
+
+/* زر التليجرام */
+.toggle{
+  cursor:pointer;
+}
+
+/* قائمة التليجرام */
+.telegram-list{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.6s ease;
+}
+
+.telegram-list.open{
+  max-height:600px;
+}
+
+/* أنيميشن ظهور */
+.telegram-list a{
+  opacity:0;
+  transform:translateY(-10px);
+  transition:0.4s;
+}
+
+.telegram-list.open a{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* فوتر */
+.footer{
+  margin-top:20px;
+  font-size:11px;
+  color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+  <img src="logo.jpeg">
+</div>
+
+<h1>ASG Collection</h1>
+<div class="sub">Best Products • Best Prices</div>
+
+<div class="icons">
+  <a href="https://t.me/+cvQqcfpfEm45ZDRk"><i class="fab fa-telegram"></i></a>
+  <a href="https://www.facebook.com/share/18VAmaaw3k/"><i class="fab fa-facebook"></i></a>
+  <a href="https://vm.tiktok.com/ZS9LDyxJKUwce-u38nm/"><i class="fab fa-tiktok"></i></a>
+</div>
+
+<!-- الأساسي -->
+<a class="link" href="https://www.facebook.com/share/18VAmaaw3k/">
+  <i class="fab fa-facebook"></i> Facebook
+</a>
+
+<a class="link" href="https://vm.tiktok.com/ZS9LDyxJKUwce-u38nm/">
+  <i class="fab fa-tiktok"></i> TikTok
+</a>
+
+<a class="link" href="https://wa.me/201507540976">
+  <i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+<!-- زر التليجرام -->
+<div class="link toggle" onclick="toggleTelegram()">
+  <i class="fab fa-telegram"></i> Telegram Channels
+</div>
+
+<!-- القنوات -->
+<div class="telegram-list" id="tg">
+
+  <a class="link" href="https://t.me/+cvQqcfpfEm45ZDRk">Telegram</a>
+  <a class="link" href="https://t.me/+S8jlor76U8JhMGU0">Telegram</a>
+  <a class="link" href="https://t.me/+WJX-vfT_n2thYmVk">Telegram</a>
+  <a class="link" href="https://t.me/+aStkOZ1UQu02MWE8">Telegram</a>
+  <a class="link" href="https://t.me/+NpUVbIkrMW5hMTJk">Telegram</a>
+  <a class="link" href="https://t.me/+EiFjyY61P9w2YzA0">Telegram</a>
+  <a class="link" href="https://t.me/+VyjgwabrB9JmMmJk">Telegram</a>
+
+</div>
+
+<div class="footer">© ASG 2026</div>
+
+</div>
+
+<script>
+function toggleTelegram(){
+  document.getElementById("tg").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
